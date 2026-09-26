@@ -298,6 +298,20 @@
     }
   }
 
+
+  /* Two-hand mobile layout: movement on the left, bomb on the opposite/right side. */
+  @media (hover:none) and (pointer:coarse) and (orientation:landscape) {
+    .touch-dpad {
+      left:max(10px, env(safe-area-inset-left));
+      right:auto !important;
+      bottom:calc(10px + env(safe-area-inset-bottom));
+    }
+    .touch-bomb {
+      left:auto !important;
+      right:max(18px, env(safe-area-inset-right));
+      bottom:calc(18px + env(safe-area-inset-bottom));
+    }
+  }
 </style>
 </head>
 <body class="home-active">
